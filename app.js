@@ -5,6 +5,10 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 
+app.get('/test', (req, res) => {
+    res.send('hello');
+})
+
 app.get('/', async (req, res) => {
     const { mobile } = req.body;
     console.log(mobile);
